@@ -30,12 +30,12 @@ export class HomePage {
 
 
   ionViewDidLoad() {
-    //if place the initial method here, it works.
+    //if place the initializing method here, it works.
     this.setSimpleUserList();
 
     this.http.get("http://app.thepaper.cn/clt/jsp/v3/allNodes.jsp?type=4&WD-UUID=864819028898243").toPromise()
       .then(result => {
-        //if place the initial method in a promise, it has error. ngModel can not bind correctly.
+        //if place the initializing method in a promise, it has error. ngModel can not bind correctly.
         this.setCombUserList();
 
       })
