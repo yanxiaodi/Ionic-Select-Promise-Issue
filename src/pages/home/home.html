@@ -12,11 +12,14 @@
     <p>
         Take a look at the <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.
     </p>
-    <ion-select [(ngModel)]="combSelectedUserList" [compareWith]="compareCombUser" multiple="true">
-        <ion-option *ngFor="let item of combUserList" [value]="item">{{item.sourceUser.Name}} {{item.targetUser.Name}}</ion-option>
-    </ion-select>
-
-    <ion-select [(ngModel)]="simpleSelectedUserList" [compareWith]="compareSimpleUser" multiple="true">
-        <ion-option *ngFor="let item of simpleUserList" [value]="item">{{item.Name}} {{item.City}}</ion-option>
-    </ion-select>
+    <ion-item>
+        <ion-select [(ngModel)]="combSelectedUserList" [compareWith]="compareCombUser" multiple="true">
+            <ion-option *ngFor="let item of combUserList" [value]="item">{{item.sourceUser.Name}} {{item.targetUser.Name}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-select [(ngModel)]="simpleSelectedUserList" [compareWith]="compareSimpleUser" multiple="true">
+            <ion-option *ngFor="let item of simpleUserList" [value]="item">{{item.Name}} {{item.City}}</ion-option>
+        </ion-select>
+    </ion-item>
 </ion-content>

@@ -38,6 +38,9 @@ export class HomePage {
         //if place the initial method in a promise, it has error. ngModel can not bind correctly.
         this.setCombUserList();
 
+      })
+      .catch(error=>{
+        this.setCombUserList();
       });
   }
 
